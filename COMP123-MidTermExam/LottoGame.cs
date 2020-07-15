@@ -148,9 +148,12 @@ namespace COMP123_MidTermExam
             // for each lottoNumber in ElementList, loop...
             foreach (int lottoNumber in ElementList)
             {
+
                 // add lottoNumber and appropriate spaces to the lottoNumberString variable
                 lottoNumberString += lottoNumber > 9 ? (lottoNumber + " ") : (lottoNumber + "  ");
             }
+
+
 
             return lottoNumberString;
         }
@@ -163,30 +166,26 @@ namespace COMP123_MidTermExam
             int currentRandom;
             bool ElementListempty = !ElementList.Any();
             bool NumberListempty = !NumberList.Any();
-            if (ElementListempty == true || NumberListempty == true)
+            if (ElementListempty != true || NumberListempty != true)
             {
-                m_build();
-            }
-            else
-            {
+
+
                 ElementList.Clear();
                 NumberList.Clear();
                 m_build();
-
-            }
-
-            for (int j = 1; j < ElementNumber; j++)
+                for (int j = 0; j < ElementNumber; j++)
                 {
                     currentRandom = m_random.Next(NumberList.Count);
                     NumberList.Remove(currentRandom);
                     ElementList.Add(currentRandom);
 
                 }
+
                 ElementList.Sort();
 
             }
-
-            
         }
+
+    }
     }
 

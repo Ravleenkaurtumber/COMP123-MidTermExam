@@ -29,5 +29,16 @@ namespace COMP123_MidTermExam
         }
 
         // CREATE the public GenerateLottoNumbers method here ----------------
+        public void GenerateLottoNumbers()
+        {
+            for (int i = 1; i <= 7; i++)
+            {
+                PickElements();
+
+                Console.Write($"ticket{ i } :");
+                Console.WriteLine(ToString());
+
+            }
+        }
     }
 }
