@@ -30,6 +30,7 @@ namespace COMP123_MidTermExam
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE public properties here -----------------------------------------
+        // The property ElementList which will contain the random numbers generated from the NumberList
         public List<int> ElementList
         {
             get
@@ -37,7 +38,7 @@ namespace COMP123_MidTermExam
                 return m_elementList;
             }
         }
-
+        //ElementNumber stores the number of time the random number need to be genrated according to lottery system
         public int ElementNumber
         {
             get
@@ -49,7 +50,7 @@ namespace COMP123_MidTermExam
                 m_elementNumber = value;
             }
         }
-
+        //Property NumberList stores all the numbers from 1 to setsize(49)
         public List<int> NumberList
         {
             get
@@ -57,7 +58,7 @@ namespace COMP123_MidTermExam
                 return m_numberList;
             }
         }
-
+        //for random numbers
         public Random random
         {
             get
@@ -66,7 +67,7 @@ namespace COMP123_MidTermExam
 
             }
         }
-
+        //setsize for the limit of numbers in numberlist(49)
         public int SetSize
         {
             get
@@ -112,6 +113,7 @@ namespace COMP123_MidTermExam
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the private _initialize method here -----------------------------
+        //this method will instantiate new objects for the private fields
         private void m_initialize()
         {
             m_numberList=new List<int>();
@@ -120,6 +122,7 @@ namespace COMP123_MidTermExam
 
         }
         // CREATE the private _build method here -----------------------------------
+        // To store the numbers in numberlist
         private void m_build()
         {
             for (int i = 1; i <= SetSize; i++)
@@ -161,6 +164,10 @@ namespace COMP123_MidTermExam
         // PUBLIC METHODS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // CREATE the public PickElements method here ----------------------------
+        /// <summary>
+        /// pickElements this method generate random numbers.
+        /// after generating remove from numberList and add to elementlist
+        /// </summary>
         public void PickElements()
         {
             int currentRandom;
@@ -173,8 +180,8 @@ namespace COMP123_MidTermExam
                 //if the lists contain some values the clear is used to make them empty 
                 ElementList.Clear();
                 NumberList.Clear();
-                m_build();//fill the numberList
-                for (int j = 0; j < ElementNumber; j++)
+                m_build();// will fill the numberList
+                for (int j = 1; j <= ElementNumber; j++)
                 {
                     currentRandom = m_random.Next(NumberList.Count);
                     NumberList.Remove(currentRandom);
@@ -182,7 +189,7 @@ namespace COMP123_MidTermExam
 
                 }
 
-                ElementList.Sort();
+                ElementList.Sort();//sprting the list
 
             }
         }

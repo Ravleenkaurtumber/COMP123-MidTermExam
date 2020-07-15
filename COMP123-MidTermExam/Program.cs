@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace COMP123_MidTermExam
 {
+    /*Student Name:Ravleen Kaur
+     Student Id:301101894
+    course :Programming 2(section 001)
+    This code is for my midterm test. It implements the lottery system(lottoMax and Lotto649)
+    It generate the random number for both types of lottery*/
     /**
      * <summary>
-     * This is the driver class
+     * This is the driver class.
+     *
      * </summary>
      * 
      * @class Program
