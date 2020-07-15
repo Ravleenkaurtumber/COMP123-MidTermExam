@@ -27,7 +27,9 @@ namespace COMP123_MidTermExam
         private Random m_random;
 
         private int m_setSize;
-        // CREATE private fields here --------------------------------------------
+        // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        // CREATE public properties here -----------------------------------------
         public List<int> ElementList
         {
             get
@@ -77,9 +79,7 @@ namespace COMP123_MidTermExam
             }
         }
         
-        // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
-        // CREATE public properties here -----------------------------------------
+       
 
         // CONSTRUCTORS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -166,13 +166,14 @@ namespace COMP123_MidTermExam
             int currentRandom;
             bool ElementListempty = !ElementList.Any();
             bool NumberListempty = !NumberList.Any();
+            //checking if the elementList and NumberList are empty or not 
+
             if (ElementListempty != true || NumberListempty != true)
             {
-
-
+                //if the lists contain some values the clear is used to make them empty 
                 ElementList.Clear();
                 NumberList.Clear();
-                m_build();
+                m_build();//fill the numberList
                 for (int j = 0; j < ElementNumber; j++)
                 {
                     currentRandom = m_random.Next(NumberList.Count);

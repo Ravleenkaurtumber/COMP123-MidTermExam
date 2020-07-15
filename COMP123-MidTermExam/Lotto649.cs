@@ -36,8 +36,7 @@ namespace COMP123_MidTermExam
         {
             for (int i = 1; i <= 6; i++)
             {
-                PickElements();
-
+                PickElements(); //calling pick Elements to generate random numbers
                 Console.Write($"ticket{ i } :");
                 Console.WriteLine(ToString());
                 
