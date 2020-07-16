@@ -183,13 +183,13 @@ namespace COMP123_MidTermExam
                 m_build();// will fill the numberList
                 for (int j = 1; j <= ElementNumber; j++)
                 {
-                    currentRandom = m_random.Next(NumberList.Count);
+                    currentRandom = m_random.Next(1,NumberList.Count);
                     NumberList.Remove(currentRandom);
                     ElementList.Add(currentRandom);
 
                 }
 
-                ElementList.Sort();//sprting the list
+                ElementList.Sort();//sorting the list
 
             }
         }

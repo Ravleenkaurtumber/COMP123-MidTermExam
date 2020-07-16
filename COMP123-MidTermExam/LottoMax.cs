@@ -39,7 +39,7 @@ namespace COMP123_MidTermExam
          */
         public void GenerateLottoNumbers()
         {
-            for (int i = 1; i <= 7; i++)
+            for (int i = 1; i <= ElementNumber; i++)
             {
                 PickElements();
 

@@ -43,7 +43,7 @@ namespace COMP123_MidTermExam
          */
         public void GenerateLottoNumbers()
         {
-            for (int i = 1; i <= 6; i++)
+            for (int i = 1; i <= ElementNumber; i++)
             {
                 PickElements(); //calling pick Elements to generate random numbers
                 Console.Write($"ticket{ i } :");
